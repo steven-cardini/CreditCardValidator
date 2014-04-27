@@ -90,7 +90,7 @@ public class LuhnAlgorithm {
 				return "Maestro";
 		}
 
-		return "Unknown";
+		return "Unknown issuer";
 	}
 
 }

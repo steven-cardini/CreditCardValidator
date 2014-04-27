@@ -23,7 +23,7 @@ public class CreditCardValidatorPanel extends JPanel implements KeyListener,
 	private CardNumberField numberInput;
 	private JButton submitButton;
 
-	private String message = "Geben Sie ihre Kreditkartennr. ein!";
+	private String message = "Please enter your card number.";
 	private boolean isErrorMessage = false;
 	private Font font = new Font("Trebuchet MS", Font.BOLD, 18);
 	private Color normalColor = new Color(50,205,50);
@@ -126,7 +126,7 @@ public class CreditCardValidatorPanel extends JPanel implements KeyListener,
 	@Override
 	public void actionPerformed(ActionEvent a) {
 		if (LuhnAlgorithm.isValidCreditCard(this.numberInput.getNumber())) {
-			this.message = LuhnAlgorithm.getIssuer(this.numberInput
+			this.message = "Valid: " + LuhnAlgorithm.getIssuer(this.numberInput
 					.getNumber());
 			this.isErrorMessage = false;
 		} else {
