@@ -26,6 +26,8 @@ public class CreditCardValidatorPanel extends JPanel implements KeyListener,
 	private String message = "Geben Sie ihre Kreditkartennr. ein!";
 	private boolean isErrorMessage = false;
 	private Font font = new Font("Trebuchet MS", Font.BOLD, 18);
+	private Color normalColor = new Color(50,205,50);
+	private Color errorColor = new Color (220,20,60);
 
 	public CreditCardValidatorPanel() {
 		this.setLayout(null);
@@ -78,9 +80,9 @@ public class CreditCardValidatorPanel extends JPanel implements KeyListener,
 		g.setFont(this.font);
 
 		if (this.isErrorMessage) {
-			g.setColor(Color.RED);
+			g.setColor(errorColor);
 		} else {
-			g.setColor(Color.GREEN);
+			g.setColor(normalColor);
 		}
 
 		g.drawString(this.message, 20, 80);

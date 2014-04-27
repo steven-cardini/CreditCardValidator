@@ -41,6 +41,7 @@ public class CardNumberField extends JTextField {
 		
 		if (!this.isEmpty() && !this.isSeparatorAhead()) {
 			this.setText(this.getText().substring(0,this.getText().length()-1));
+			this.removeSeparatorAhead();
 		} else {
 			this.removeSeparatorAhead();
 		}
